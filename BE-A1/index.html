@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лига знаний</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link rel="shortcut icon" href="./assets/images/logo_web.png" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="index.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+
+      ym(90502625, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/90502625"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+    
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '208332088965244');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=208332088965244&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body>
+    <div class="header__burger off">
+      <img class="cross" src="./assets/images/cross.svg" alt="cross" />
+      <ul>
+        <a href="#about-us"><li>О нас</li></a>
+        <a href="#types"><li>Консультации</li></a>
+        <a href="#team"><li>Почему выбирают нас</li></a>
+        <a href="#work"><li>Как мы работаем</li></a>
+        <a href="#guarantees"><li>Наши гарантии</li></a>
+        <a href="#footer"><li>Контакты</li></a>
+      </ul>
+      <div class="header-mobile-contacts">
+        <ul>
+          <!-- <li>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/ligaznanij/?igshid=YmMyMTA2M2Y="
+              ><img src="./assets/images/insta_red.svg" alt="insta"
+            /></a>
+          </li> -->
+          <li>
+            <a href="viber://chat?number=%2B375447779115"
+              ><img src="./assets/images/viber-red.svg" alt="viber"
+            /></a>
+          </li>
+          <li>
+            <a href="https://t.me/liga_znanij"
+              ><img src="./assets/images/tg-red.svg" alt="telegram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://wa.me/79060412682"
+              ><img src="./assets/images/tel-red.svg" alt="whatsapp"
+            /></a>
+          </li>
+          <!-- <li>
+            <a target="_blank" href="https://vk.com/ligaznanij"
+              ><img src="./assets/images/vk-red.svg" alt="vk"
+            /></a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+    <header class="header">
+      <img class="header__dropdown" src="./assets/images/dropdown_header.svg" />
+      <div class="header__logo-wrapper">
+        <div class="header__logo-wrapper_img">
+          <img src="./assets/images/logo.svg" alt="лига знаний" />
+        </div>
+        <div class="header__logo-wrapper_title">
+          <img src="./assets/images/title.svg" alt="лига знаний" />
+          <p>Твой помощник в учебе</p>
+        </div>
+      </div>
+      <nav class="header__nav">
+        <div class="header__nav_contact-info">
+          <div class="header__nav_contact-info-social-media">
+            <ul>
+              <!-- <li>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/ligaznanij/?igshid=YmMyMTA2M2Y="
+                  ><img src="./assets/images/insta.svg" alt="instagram"
+                /></a>
+              </li> -->
+              <li>
+                <a href="viber://chat?number=%2B375447779115"
+                  ><img src="./assets/images/viber.svg" alt="viber"
+                /></a>
+              </li>
+              <li>
+                <a href="https://t.me/liga_znanij"
+                  ><img src="./assets/images/tg.svg" alt="telegram"
+                /></a>
+              </li>
+              <li>
+                <a href="https://wa.me/79060412682"
+                  ><img src="./assets/images/tel.svg" alt="whatsapp"
+                /></a>
+              </li>
+              <!-- <li>
+                <a target="_blank" href="https://vk.com/ligaznanij"
+                  ><img src="./assets/images/vk.svg" alt="vk"
+                /></a>
+              </li> -->
+            </ul>
+          </div>
+          <div class="header__nav_contact-info-contacts">
+            <img src="./assets/images/phone.svg" alt="call" />
+            <div>
+              <p class="desktopPhone">+7 906 041 26 82</p>
+              <p class="desktopPhone">+375 29 169 70 00</p>
+              <p class="mobilePhone">
+                <a href="tel:+79060412682">+7 906 041 26 82</a>
+              </p>
+              <p class="mobilePhone">
+                <a href="tel:+375291697000">+375 29 169 70 00</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="header__nav_site-nav">
+          <ul>
+            <li>
+              <a href="#about-us">О нас</a>
+              <div></div>
+            </li>
+            <li>
+              <a href="#types">Консультации</a>
+              <div></div>
+            </li>
+            <li>
+              <a href="#team">Почему выбирают нас</a>
+              <div></div>
+            </li>
+            <li>
+              <a href="#work">Как мы работаем</a>
+              <div></div>
+            </li>
+            <li>
+              <a href="#guarantees">Наши гарантии</a>
+              <div></div>
+            </li>
+          </ul>
+          <a href="https://taplink.cc/ligaznanij"
+            ><button class="button">Напиши нам</button></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="about-us" class="description">
+        <div>
+          <p class="description__title">
+            Студент, поможем решить твою проблему!
+          </p>
+        </div>
+        <div class="description__img">
+          <div class="flex-buttons">
+            <div>
+              <button class="absolute-btn wa">Или в WhatsApp</button>
+              <button class="absolute-btn vi">Можно даже и в Viber</button>
+            </div>
+            <div>
+              <button class="absolute-btn tg">Напиши нам в тележку</button>
+            </div>
+          </div>
+        </div>
+        <div class="flex-buttons-mobile">
+          <div>
+            <button class="absolute-btn tg">Напиши нам в тележку</button>
+          </div>
+          <div>
+            <button class="absolute-btn wa">Или в WhatsApp</button>
+            <button class="absolute-btn vi">Можно, кнч, и в Viber</button>
+          </div>
+        </div>
+      </section>
+      <section id="types" class="services">
+        <h1 class="services__title">виды работ в которых мы шарим</h1>
+        <div class="services__wrapper">
+          <div class="space"></div>
+          <div class="wrapper">
+            <div class="cards">
+              <div class="card">
+                <h1>курсовая работа</h1>
+                <!-- <p class="price">от <span>2400</span> руб</p> -->
+                <p class="time">от 2 дней</p>
+                <div class="line"></div>
+                <ul>
+                  <li>Раскрывает тему;</li>
+                  <li>Соответствует заявленному уровню оригинальности;</li>
+                  <li>Описывает теоретические положения;</li>
+                  <li>Имеет практическую или эмпирическую часть;</li>
+                  <li>Оформлена по ГОСТу.</li>
+                </ul>
+                <button data-content="Курсовая работа" class="button">
+                  подробнее
+                </button>
+              </div>
+              <div class="card">
+                <h1>дипломная работа</h1>
+                <!-- <p class="price">от <span>8100</span> руб</p> -->
+                <p class="time">от 5 дней</p>
+                <div class="line"></div>
+                <ul>
+                  <li>Раскрывает тему;</li>
+                  <li>Заявленный уровень оригинальности;</li>
+                  <li>Описывает теоретические положения;</li>
+                  <li>Имеет практическую или эмпирическую часть;</li>
+                  <li>Выносит на защиту предложения в проектной части;</li>
+                  <li>Оформлена по ГОСТу.</li>
+                </ul>
+                <button data-content="Курсовая работа" class="button">
+                  подробнее
+                </button>
+              </div>
+              <div class="card">
+                <h1>магистерская диссертация</h1>
+                <!-- <p class="price">от <span>14400</span> руб</p> -->
+                <p class="time">от 8 дней</p>
+                <div class="line"></div>
+                <ul>
+                  <li>Раскрывает тему;</li>
+                  <li>Заявленный уровень оригинальности;</li>
+                  <li>Описывает теоретические положения;</li>
+                  <li>Имеет практическую или эмпирическую часть;</li>
+                  <li>Выносит на защиту предложения в проектной части;</li>
+                  <li>Выдвигает и подтверждает гипотезу;</li>
+                  <li>Оформлена по ГОСТу.</li>
+                </ul>
+                <button data-content="Курсовая работа" class="button">
+                  подробнее
+                </button>
+              </div>
+              <div class="card">
+                <h1>другое</h1>
+                <!-- <p class="price">от <span>1600</span> руб</p> -->
+                <p class="time">от 1 дня</p>
+                <div class="line"></div>
+                <ul>
+                  <li>Другие виды научных работ по заявленным требованиям.</li>
+                </ul>
+                <button data-content="Курсовая работа" class="button">
+                  подробнее
+                </button>
+              </div>
+              <div class="card">
+                <h1>реферат</h1>
+                <!-- <p class="price">от <span>1000</span> руб</p> -->
+                <p class="time">от 1 дня</p>
+                <div class="line"></div>
+                <ul>
+                  <li>Раскрывает тему;</li>
+                  <li>Соответствует заявленному уровню оригинальности;</li>
+                  <li>Описывает теоретические положения;</li>
+                  <li>Оформлена по ГОСТу.</li>
+                </ul>
+                <button data-content="Курсовая работа" class="button">
+                  подробнее
+                </button>
+              </div>
+              <div class="card">
+                <h1>статья</h1>
+                <!-- <p class="price">от <span>1500</span> руб</p> -->
+                <p class="time">от 1 дня</p>
+                <div class="line"></div>
+                <ul>
+                  <li>Раскрывает актуальность темы сегодняшнего дня;</li>
+                  <li>Соответствует заявленному уровню оригинальности;</li>
+                  <li>Отвечает требованиям РИНЦ / ВАК.</li>
+                </ul>
+                <button data-content="Курсовая работа" class="button">
+                  подробнее
+                </button>
+              </div>
+              <div class="card">
+                <h1>эссе</h1>
+                <!-- <p class="price">от <span>250</span> руб</p> -->
+                <p class="time">от 1 дня</p>
+                <div class="line"></div>
+                <ul>
+                  <li>Индивидуальные требования;</li>
+                  <li>Уникальность от 90%;</li>
+                  <li>Научное рассуждение;</li>
+                  <li>Исследование теоретических положений;</li>
+                  <li>Оформлена по ГОСТу.</li>
+                </ul>
+                <button data-content="Курсовая работа" class="button">
+                  подробнее
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="space"></div>
+        </div>
+        <div class="arrows">
+          <svg
+            data-direction="left"
+            class="arrow"
+            width="23"
+            height="21"
+            viewBox="0 0 23 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.07053 10.3652L21.0703 10.2729"
+              stroke="#F64C71"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M9.77832 1.3252L1.06993 10.3655L9.86136 19.325"
+              stroke="#F64C71"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            data-direction="right"
+            class="arrow"
+            width="23"
+            height="21"
+            viewBox="0 0 23 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21.2078 10.2727L1.20801 10.365"
+              stroke="#F64C71"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12.416 1.31323L21.2074 10.2728L12.4991 19.313"
+              stroke="#F64C71"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </section>
+      <section class="info">
+        <picture>
+          <source
+            media="(max-width: 500px)"
+            srcset="./assets/images/paper_375.png"
+          />
+          <img
+            src="./assets/images/unsplash_-2vD8lIhdnw.png"
+            alt="лига знаний"
+          />
+        </picture>
+        <div class="info__content">
+          <p>
+            не знаешь, с чего начать? Поможем с
+            <span>составлением плана</span> бесплатно!
+          </p>
+          <a class="link" href="https://taplink.cc/ligaznanij"
+            ><button class="button">Напиши нам</button></a
+          >
+        </div>
+      </section>
+      <section id="team" class="about-team">
+        <h1>почему выбирают нас?</h1>
+        <div class="about-team__container">
+          <div class="about-team__wrapper">
+            <div class="plus">
+              <img src="./assets/images/money.svg" alt="money" />
+              <h6>Гарантия качества</h6>
+              <p>
+                У нас минимальная предоплата. Ты внесешь основной платеж, после
+                после подтверждения выполненной работы.
+              </p>
+            </div>
+            <div class="plus">
+              <img src="./assets/images/team.svg" alt="team" />
+              <h6>Сильная команда</h6>
+              <p>
+                Тщательный подход к выбору эксперта. В нашей команде 12
+                кандидатов наук, 2 доктора наук и 6 аспирантов.
+              </p>
+            </div>
+            <div class="plus">
+              <img src="./assets/images/medal.svg" alt="medal" />
+              <h6>Качество услуг</h6>
+              <p>
+                Мы дорожим каждым клиентом, поэтому держим на высоте качество
+                оказываемыx услуг, ведь вы - будущее нашей компании!
+              </p>
+            </div>
+          </div>
+          <div class="about-team__wrapper">
+            <div class="plus">
+              <img src="./assets/images/manager.svg" alt="manager" />
+              <h6>Личный менеджер</h6>
+              <p>
+                Подберем для тебя личного менеджера с углубленными знаниями по
+                предмету. Кстати, ты можешь звонить ему даже ночью :)
+              </p>
+            </div>
+            <div class="plus">
+              <img src="./assets/images/money.svg" alt="money" />
+              <h6>Доведем до конца</h6>
+              <p>Бесплатно поможем исправить все замечания руководителя.</p>
+            </div>
+          </div>
+        </div>
+        <div class="arrows2">
+          <svg
+            data-direction="left"
+            class="arrow2"
+            width="23"
+            height="21"
+            viewBox="0 0 23 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.07053 10.3652L21.0703 10.2729"
+              stroke="#F64C71"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M9.77832 1.3252L1.06993 10.3655L9.86136 19.325"
+              stroke="#F64C71"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            data-direction="right"
+            class="arrow2"
+            width="23"
+            height="21"
+            viewBox="0 0 23 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21.2078 10.2727L1.20801 10.365"
+              stroke="#F64C71"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12.416 1.31323L21.2074 10.2728L12.4991 19.313"
+              stroke="#F64C71"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <!-- <div class="work_types">
+          <div class="work_types_container">
+            <p>
+              Экономика, менеджмент, <span>бухгалтерский учет и аудит</span>,
+              государственное и муниципальное управление (ГМУ)
+            </p>
+            <p>
+              <span>таможенное дело</span> логистика, маркетинг, туризм, право,
+              международные отношения, <span>педагогика, психология</span>,
+              реклама и PR
+            </p>
+            <p>
+              социология, связь с общественностью
+              <span>литература, история</span>, конфликтология, культурология,
+              философия <span>и т.д.</span>
+            </p>
+          </div>
+        </div> -->
+      </section>
+      <section class="info">
+        <picture>
+          <source
+            media="(max-width: 500px)"
+            srcset="./assets/images/comp_375.png"
+          />
+          <img
+            src="./assets/images/unsplash_744oGeqpxPQ.png"
+            alt="лига знаний"
+          />
+        </picture>
+        <div class="info__content">
+          <p>
+            МЫ ЗНАЕМ КАК ПРОХОДИТЬ <span>ОРИГИНАЛЬНОСТЬ</span> НА ВСЕХ СИСТЕМАХ
+            <span>ПРОВЕРКИ</span>: АП.РУ, АП.ВУЗ, ETXT И ДР.
+          </p>
+          <a class="link" href="https://taplink.cc/ligaznanij"
+            ><button class="button">Напиши нам</button></a
+          >
+        </div>
+      </section>
+      <section id="work" class="working">
+        <h1>как мы работаем</h1>
+        <picture>
+          <source
+            media="(max-width:500px)"
+            srcset="./assets/images/about_team-arrow.svg"
+          />
+          <img
+            class="working__arrow first"
+            src="./assets/images/arrow_top.svg"
+            alt=""
+          />
+        </picture>
+        <picture>
+          <source
+            media="(max-width: 500px)"
+            srcset="./assets/images/about_team-arrow.svg"
+          />
+          <img
+            class="working__arrow second"
+            src="./assets/images/arrow_bottom.svg"
+            alt=""
+          />
+        </picture>
+        <picture>
+          <source
+            media="(max-width: 500px)"
+            srcset="./assets/images/about_team-arrow.svg"
+          />
+          <img
+            class="working__arrow third"
+            src="./assets/images/arrow_top.svg"
+            alt=""
+          />
+        </picture>
+        <div class="working__cases">
+          <div class="case">
+            <img src="./assets/images/how1.png" alt="" />
+            <p>
+              Оцениваем стоимость
+              <br /><span>услуг</span>
+            </p>
+          </div>
+          <div class="case">
+            <img src="./assets/images/how2.png" alt="" />
+            <p>
+              Ожидаем внесения <span>аванса</span> и <span>приступаем</span> к
+              выполнению<br />
+            </p>
+          </div>
+          <div class="case">
+            <img src="./assets/images/how3.png" alt="" />
+            <p>
+              Ты получаешь <span>уведомление о готовности</span> и вносишь
+              оставшуюся сумму
+            </p>
+          </div>
+          <div class="case">
+            <img src="./assets/images/how4.png" alt="" />
+            <p>С нашими услугами успешно <span>готовишься к защите</span></p>
+          </div>
+        </div>
+      </section>
+      <section id="guarantees" class="guarantees">
+        <h1 class="guarantees__title">наши гарантии</h1>
+        <div class="guarantees__cards">
+          <div class="guarantees__cards-column">
+            <div class="guarantees__cards-row">
+              <div>
+                <h2 class="guarantess_headers">
+                  <span>1</span> Уникальность текста<img
+                    src="./assets/images/dropdown_arrow.svg"
+                  />
+                </h2>
+                <p>
+                  Подготовленный материал является уникальным. Мы готовы
+                  предоставить отчёт по любой системе проверки, даже АП.ВУЗ
+                </p>
+              </div>
+              <div>
+                <h2>
+                  <span>2</span> Актуальность исследования<img
+                    src="./assets/images/dropdown_arrow.svg"
+                  />
+                </h2>
+                <p>
+                  Мы готовы предоставить всю информацию по собранным данным и
+                  источникам, обработке и систематизации информации. При этом,
+                  70% источников не будут старше 3-х лет.
+                </p>
+              </div>
+            </div>
+            <div class="guarantees__cards-row margin_auto">
+              <div>
+                <h2>
+                  <span>3</span> Экспертные консультации и принцип
+                  открытости<img src="./assets/images/dropdown_arrow.svg" />
+                </h2>
+                <p>
+                  Ты всегда можешь запросить информацию по эксперту: его
+                  портфолио выполненных заказов, научную степень и тд. Ты вправе
+                  знать всё.
+                </p>
+              </div>
+              <div>
+                <h2>
+                  <span>4</span> Минимальная предоплата<img
+                    src="./assets/images/dropdown_arrow.svg"
+                  />
+                </h2>
+                <p>
+                  Наши клиенты не несут никаких финансовых рисков, соглашаясь на
+                  сотрудничество с нами, ведь мы берем минимальную предоплату,
+                  чтобы начать работать, и готовы получить вознаграждение,
+                  только когда ты одобришь нашу работу.
+                </p>
+              </div>
+            </div>
+            <p class="ps-text">
+              * Результатом деятельность команды Лига Знаний не являются научные
+              работы. Команда оказывает информационные и консультационные услуги
+              по подборке актуального материала и толкованию актуального
+              законодательства.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="footer__info">
+        <section class="footer__info__section">
+          <nav>
+            <ul>
+              <li>
+                <div class="footer-nav-border"></div>
+                <a class="footer-nav" href="#about-us">О нас</a>
+              </li>
+              <li>
+                <div class="footer-nav-border"></div>
+                <a class="footer-nav" href="#types">Консультации</a>
+              </li>
+              <li>
+                <div class="footer-nav-border"></div>
+                <a class="footer-nav" href="#team">Почему выбирают нас</a>
+              </li>
+              <li>
+                <div class="footer-nav-border"></div>
+                <a class="footer-nav" href="#work">Как мы работаем</a>
+              </li>
+              <li>
+                <div class="footer-nav-border"></div>
+                <a class="footer-nav" href="#guarantees">Наши гарантии</a>
+              </li>
+              <li>
+                <div class="footer-nav-border"></div>
+                <a class="footer-nav" href="#">Для авторов</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <section class="footer__info__section">
+          <h6>Телефон:</h6>
+          <p class="desktopPhone">+7 906 041 26 82</p>
+          <p class="desktopPhone">+375 29 169 70 00</p>
+          <p class="mobilePhone">
+            <a href="tel:+79060412682">+7 906 041 26 82</a>
+          </p>
+          <p class="mobilePhone">
+            <a href="tel:+375291697000">+375 29 169 70 00</a>
+          </p>
+        </section>
+        <section class="footer__info__section">
+          <h6>Адрес:</h6>
+          <p>г. Москва</p>
+          <p>ул. Большая Никитская, 18</p>
+          <p>офис 111</p>
+          <p>метро Охотный ряд</p>
+        </section>
+        <section class="footer__info__section">
+          <h6>Электронная почта</h6>
+          <p>ligaznanij.info@gmail.com</p>
+          <br />
+          <h6>
+            <a href="./offert.pdf" target="_blank">Публичная оферта</a>
+          </h6>
+        </section>
+        <section class="footer__info__section">
+          <h6>Социальные сети</h6>
+          <nav>
+            <ul class="footer__social-media">
+              <!-- <li>
+                <a
+                  target="_blank"
+                  href="https://instagram.com/ligaznanij?igshid=YmMyMTA2M2Y="
+                  ><img src="./assets/images/insta.svg" alt="telegram"
+                /></a>
+              </li> -->
+              <li>
+                <a href="viber://chat?number=%2B375447779115"
+                  ><img src="./assets/images/viber.svg" alt="viber"
+                /></a>
+              </li>
+              <li>
+                <a href="https://t.me/liga_znanij"
+                  ><img src="./assets/images/tg.svg" alt="telegram"
+                /></a>
+              </li>
+              <li>
+                <a href="https://wa.me/79060412682"
+                  ><img src="./assets/images/tel.svg" alt="whatsapp"
+                /></a>
+              </li>
+              <!-- <li>
+                <a target="_blank" href="https://vk.com/ligaznanij"
+                  ><img src="./assets/images/vk.svg" alt="vk"
+                /></a>
+              </li> -->
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <div class="pay">
+        <img src="./assets/images/Group 82.svg" alt="cards" />
+      </div>
+    </footer>
+  </body>
+</html>
